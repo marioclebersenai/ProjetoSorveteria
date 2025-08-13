@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoSorveteria.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#8A19D6"
+    Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="Auto,*">
+        <Grid MaximumHeightRequest="300" VerticalOptions="End">
+            <Image Aspect="Fill" Source="banner.png" />
+            <VerticalStackLayout
+                Margin="0,0,0,70"
+                Padding="40"
+                VerticalOptions="End">
+                <Label
+                    FontAttributes="Bold"
+                    FontFamily="Inter"
+                    FontSize="24"
+                    Text="Sorveteria"
+                    TextColor="#FFF" />
+                <Label
+                    FontFamily="Inter"
+                    FontSize="12"
+                    HorizontalOptions="Start"
+                    Text="Faça o login para acessar a área administrativa da sorveteria"
+                    TextColor="#FFF"
+                    WidthRequest="200" />
+            </VerticalStackLayout>
+        </Grid>
+        <Border
+            Grid.Row="1"
+            Margin="0,-50,0,0"
+            Padding="25,30"
+            BackgroundColor="#FFF"
+            StrokeShape="RoundRectangle 40, 40, 0 , 0">
+            <VerticalStackLayout>
+                <Label
+                    Margin="5,0,0,0"
+                    FontFamily="SourceSemiBold"
+                    FontSize="26"
+                    Text="Login" />
+
+                <Border
+                    Padding="20,16"
+                    HeightRequest="52"
+                    StrokeShape="RoundRectangle 32">
+                    <HorizontalStackLayout Spacing="5">
+                        <Image Source="email_cor.png" />
+                        <Entry HeightRequest="40" Placeholder="admin@dominio.com" />
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Margin="0,16,0,0"
+                    Padding="20,16"
+                    HeightRequest="52"
+                    StrokeShape="RoundRectangle 32">
+                    <HorizontalStackLayout Spacing="5">
+                        <Image Source="cadeado.png" />
+                        <Entry
+                            HeightRequest="40"
+                            IsPassword="True"
+                            Placeholder="***"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center" />
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Label
+                    Margin="0,16,0,0"
+                    FontAttributes="Bold"
+                    FontFamily="Inter"
+                    HorizontalOptions="End"
+                    Text="Esqueceu a senha?"
+                    TextColor="#8A19D6" />
+
+                <Button
+                    Margin="0,26,0,0"
+                    BackgroundColor="#8A19D6"
+                    CornerRadius="32"
+                    HeightRequest="56"
+                    Text="Entrar"
+                    WidthRequest="325" />
+
+                <HorizontalStackLayout
+                    Margin="0,50,0,0"
+                    Padding="30,0"
+                    Spacing="10">
+                    <BoxView
+                        BackgroundColor="#CBD5E1"
+                        HeightRequest="1"
+                        WidthRequest="113" />
+                    <Label Text="Ou" VerticalTextAlignment="Center" />
+                    <BoxView
+                        BackgroundColor="#CBD5E1"
+                        HeightRequest="1"
+                        WidthRequest="113" />
+                </HorizontalStackLayout>
+
+                <Button
+                    Margin="0,26,0,0"
+                    BackgroundColor="Transparent"
+                    BorderColor="#000"
+                    BorderWidth="1"
+                    CornerRadius="32"
+                    HeightRequest="56"
+                    ImageSource="google.png"
+                    Text="Google"
+                    TextColor="#000"
+                    WidthRequest="325" />
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+
+</ContentPage>
