@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoSorveteria.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="HomePage"
+    BackgroundColor="#F7F8FC"
+    Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25,20" Spacing="25">
+
+            <!--  Grid fulano  -->
+            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="15">
+                <Border
+                    BackgroundColor="#8A19D6"
+                    HeightRequest="48"
+                    StrokeShape="RoundRectangle 8"
+                    WidthRequest="48">
+                    <Image Source="foto_perfil.png" />
+                </Border>
+
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                    <Label FontSize="16" Text="Fulano" />
+
+                    <Label FontSize="12" Text="Administrador" />
+                </VerticalStackLayout>
+
+                <Border
+                    Grid.Column="2"
+                    Padding="10"
+                    BackgroundColor="#FFF"
+                    StrokeShape="RoundRectangle 12"
+                    VerticalOptions="Center">
+                    <Image
+                        HeightRequest="20"
+                        Source="bell.png"
+                        WidthRequest="20" />
+                </Border>
+            </Grid>
+
+            <!--  Grid buscar  -->
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="15">
+                <Border
+                    Padding="10,0"
+                    Background="#FFF"
+                    HeightRequest="48"
+                    StrokeShape="RoundRectangle 15">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                        <Image
+                            HeightRequest="18"
+                            Source="search.png"
+                            VerticalOptions="Center"
+                            WidthRequest="18" />
+                        <Entry
+                            Grid.Column="1"
+                            HeightRequest="65"
+                            Placeholder="Buscar ..."
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+
+                <ImageButton
+                    Grid.Column="1"
+                    Padding="15"
+                    BackgroundColor="#8A19D6"
+                    CornerRadius="15"
+                    HeightRequest="48"
+                    Source="filter.png"
+                    WidthRequest="48" />
+            </Grid>
+
+            <!--  Grid Banner Açai  -->
+            <Border
+                Padding="25,0"
+                Background="#B66DFF"
+                HeightRequest="160"
+                StrokeShape="RoundRectangle 20">
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout Spacing="8" VerticalOptions="Center">
+                        <Label
+                            FontSize="14"
+                            Text="Gerenciar"
+                            TextColor="#FFF" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="Poppins"
+                            FontSize="26"
+                            Text="Estoque"
+                            TextColor="#FFF" />
+
+                        <Button
+                            BackgroundColor="#8A19D6"
+                            CornerRadius="15"
+                            HeightRequest="42"
+                            HorizontalOptions="Start"
+                            Text="Acessar"
+                            WidthRequest="130" />
+                    </VerticalStackLayout>
+
+                    <Image
+                        Grid.Column="1"
+                        HeightRequest="160"
+                        Source="acai.png"
+                        WidthRequest="160" />
+                </Grid>
+            </Border>
+
+            <VerticalStackLayout Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Text="Estatísticas" />
+
+                <Grid ColumnDefinitions="*,*,*" ColumnSpacing="15">
+
+                    <Border
+                        Grid.Column="0"
+                        Padding="15"
+                        BackgroundColor="#8A19D6"
+                        StrokeShape="RoundRectangle 18">
+                        <VerticalStackLayout>
+                            <Image HeightRequest="24" Source="chart_dois.png" />
+                            <Label
+                                FontSize="20"
+                                HorizontalTextAlignment="Center"
+                                Text="920"
+                                TextColor="#FFF" />
+
+                            <Label
+                                FontSize="12"
+                                HorizontalTextAlignment="Center"
+                                Text="Produtos"
+                                TextColor="#FFF" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border
+                        Grid.Column="1"
+                        Padding="15"
+                        BackgroundColor="#8A19D6"
+                        StrokeShape="RoundRectangle 18">
+                        <VerticalStackLayout>
+                            <Image HeightRequest="24" Source="graph.png" />
+                            <Label
+                                FontSize="20"
+                                HorizontalTextAlignment="Center"
+                                Text="52"
+                                TextColor="#FFF" />
+
+                            <Label
+                                FontSize="12"
+                                HorizontalTextAlignment="Center"
+                                Text="Vendidos"
+                                TextColor="#FFF" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border
+                        Grid.Column="2"
+                        Padding="15"
+                        BackgroundColor="#8A19D6"
+                        StrokeShape="RoundRectangle 18">
+                        <VerticalStackLayout>
+                            <Image HeightRequest="24" Source="chart_01.png" />
+                            <Label
+                                FontSize="20"
+                                HorizontalTextAlignment="Center"
+                                Text="R$ 2 K"
+                                TextColor="#FFF" />
+
+                            <Label
+                                FontSize="12"
+                                HorizontalTextAlignment="Center"
+                                Text="Lucro"
+                                TextColor="#FFF" />
+                        </VerticalStackLayout>
+                    </Border>
+                </Grid>
+            </VerticalStackLayout>
+
+            <!--  Section Mensagens  -->
+            <VerticalStackLayout Spacing="15">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Mensagens recentes" />
+                    <HorizontalStackLayout
+                        Grid.Column="1"
+                        Spacing="5"
+                        VerticalOptions="Center">
+
+                        <Label Text="Ver mais" VerticalTextAlignment="Center" />
+
+                        <ImageButton
+                            Padding="9"
+                            BackgroundColor="#8A19D6"
+                            CornerRadius="16"
+                            HeightRequest="32"
+                            Source="seta.png"
+                            WidthRequest="32" />
+                    </HorizontalStackLayout>
+                </Grid>
+
+                <Border
+                    Padding="15"
+                    BackgroundColor="#FFF"
+                    StrokeShape="RoundRectangle 20">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="15">
+                        <Border BackgroundColor="#8A19D6" StrokeShape="RoundRectangle 14">
+                            <Image Source="ciclano.png" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label Text="Ciclano" TextColor="#000" />
+                            <Label
+                                FontSize="12"
+                                Text="Assunto"
+                                TextColor="#8A94A6" />
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="1h"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+
+                <Border
+                    Padding="15"
+                    BackgroundColor="#FFF"
+                    StrokeShape="RoundRectangle 20">
+                    <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="15">
+                        <Border BackgroundColor="#8A19D6" StrokeShape="RoundRectangle 14">
+                            <Image Source="beltrano.png" />
+                        </Border>
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                            <Label Text="Beltrano" TextColor="#000" />
+                            <Label
+                                FontSize="12"
+                                Text="Assunto"
+                                TextColor="#8A94A6" />
+                        </VerticalStackLayout>
+
+                        <Label
+                            Grid.Column="2"
+                            Text="2h"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Border>
+
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
